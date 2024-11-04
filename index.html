@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSG Valo</title>
+</head>
+<body>
+
+<div class="ban">
+
+<!-- Blue side -->
+    <div class="teamnameblue">
+        <div class="team-name-display" id="teamNameDisplay1">Blue Side</div>  
+
+    </div>
+
+    
+
+<!-- Tour Info -->
+
+<div class="tournamentname">
+    <p id="tournamentnameOutput" class="tournamentnamemid"></p>
+</div>
+
+<!-- Red side Name-->
+    <div class="teamnamered">
+        <div class="team-name-display" id="teamNameDisplay2">Red Side</div>
+
+    </div>
+
+</div>
+
+<div class="pick">
+    <!-- Template for Each Pick Item -->
+    <div class="pick1 grayscale" id="pick1">
+        <div class="nameholder">
+            <h2></h2>
+            <div id="outputContainer">
+                <p id="output1"></p>
+            </div>
+        </div>
+        <div id="image-display-1" class="image-display"></div>
+    </div>
+
+    <div class="pick1 grayscale" id="pick2">
+        <div class="nameholder">
+            <h2></h2>
+            <div id="outputContainer">
+                <p id="output2"></p>
+            </div>
+        </div>
+        <div id="image-display-2" class="image-display"></div>
+    </div>
+
+    <div class="pick1" id="pick3">
+        <div class="nameholder">
+            <h2></h2>
+            <div id="outputContainer">
+                <p id="output3"></p>
+            </div>
+        </div>
+        <div id="image-display-3" class="image-display"></div>
+    </div>
+
+    <div class="pick1" id="pick4">
+        <div class="nameholder">
+            <h2></h2>
+            <div id="outputContainer">
+                <p id="output4"></p>
+            </div>
+        </div>
+        <div id="image-display-4" class="image-display"></div>
+    </div>
+
+    <div class="pick1 grayscale" id="pick5">
+        <div class="nameholder">
+            <h2></h2>
+            <div id="outputContainer">
+                <p id="output5"></p>
+            </div>
+        </div>
+        <div id="image-display-5" class="image-display"></div>
+    </div>
+
+    <div class="pick1 grayscale" id="pick6">
+        <div class="nameholder">
+            <h2></h2>
+            <div id="outputContainer">
+                <p id="output6"></p>
+            </div>
+        </div>
+        <div id="image-display-6" class="image-display"></div>
+    </div>
+
+    <div class="pick1" id="pick7">
+        <div class="nameholder">
+            <h2></h2>
+            <div id="outputContainer">
+                <p id="output7"></p>
+            </div>
+        </div>
+        <div id="image-display-7" class="image-display"></div>
+    </div>
+</div>
+
+<!-- Tour info -->
+
+
+
+
+
+        </div>
+
+    </div>
+
+<!-- Red side -->
+
+
+    
+
+
+
+
+
+
+
+
+</div>  
+
+<!-- Control -->
+
+<div class="control">
+    <H1>CONTROL</H1>
+    <button class="controlbutton" onclick="resetAllDropdowns()">Reset Pick</button>
+
+    <button class="controlbutton" onclick="resetInputs()">Reset Nick</button>
+    <button class="controlbutton" onclick="switchInputs()">Switch Nickname</button>
+
+        <!-- Tombol untuk reset dan switch all -->
+    
+   
+    <button class="controlbutton" onclick="switchAll()">Switch Team</button>
+    <button class="controlbutton" onclick="resetContent()">Reset</button>
+    
+  <!-- Input Box -->
+  <input type="text" id="tournamentnamemid" class="tournamentnamebox" placeholder="Masukkan nama turnamen di sini" oninput="updateTournamentName()">
+  
+  <!-- Output Box -->
+
+
+</div>
+
+
+
+<!-- Input untuk 1-5 -->
+
+<div  class="allcontrol">
+    <div class="bluesidecontrol">
+        <h2>Nickname</h2>
+        <label for="input1">1</label>
+        <input type="text" id="input1" oninput="updateOutput()"><br>
+        <label for="input2">2</label>
+        <input type="text" id="input2" oninput="updateOutput()"><br>
+        <label for="input3">3</label>
+        <input type="text" id="input3" oninput="updateOutput()"><br>
+        <label for="input4">4</label>
+        <input type="text" id="input4" oninput="updateOutput()"><br>
+        <label for="input5">5</label>
+        <input type="text" id="input5" oninput="updateOutput()"><br>
+        <label for="input5">6</label>
+        <input type="text" id="input6" oninput="updateOutput()"><br>
+        <label for="input5">7</label>
+        <input type="text" id="input7" oninput="updateOutput()"><br>
+    </div>
+
+    <div class="bluesidepick">
+        <div id="dropdowns-container"><H2>Pick</H2> 
+            <!-- Setiap dropdown diberi ID unik berdasarkan indeks -->
+            <div class="dropdown-container">
+                <input type="text" id="search-1" class="dropdown" placeholder="Blue Side Pick 1" oninput="filterDropdown(1)">
+                <div id="dropdown-items-1" class="dropdown-items"></div>
+                
+            </div>
+            <div class="dropdown-container">
+                <input type="text" id="search-2" class="dropdown" placeholder="Blue Side Pick 2" oninput="filterDropdown(2)">
+                <div id="dropdown-items-2" class="dropdown-items"></div>
+                
+            </div>
+        
+            <div class="dropdown-container">
+                <input type="text" id="search-3" class="dropdown" placeholder="Blue Side Pick 3." oninput="filterDropdown(3  )">
+                <div id="dropdown-items-3" class="dropdown-items"></div>
+                
+            </div>
+
+            <div class="dropdown-container">
+                <input type="text" id="search-4" class="dropdown" placeholder="Blue Side Pick 4." oninput="filterDropdown(4  )">
+                <div id="dropdown-items-4" class="dropdown-items"></div>
+                
+            </div>
+
+            <div class="dropdown-container">
+                <input type="text" id="search-5" class="dropdown" placeholder="Blue Side Pick 5." oninput="filterDropdown(5  )">
+                <div id="dropdown-items-5" class="dropdown-items"></div>
+                
+            </div>
+            <div class="dropdown-container">
+                <input type="text" id="search-6" class="dropdown" placeholder="Blue Side Pick 6." oninput="filterDropdown(6  )">
+                <div id="dropdown-items-6" class="dropdown-items"></div>
+                
+            </div>
+            <div class="dropdown-container">
+                <input type="text" id="search-7" class="dropdown" placeholder="Blue Side Pick 7." oninput="filterDropdown(7  )">
+                <div id="dropdown-items-7" class="dropdown-items"></div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="bluesideban">
+        <div id="dropdowns-container"><H2>ban</H2> 
+            <!-- Setiap dropdown diberi ID unik berdasarkan indeks -->
+
+        
+
+
+
+
+
+            <!-- Tambahkan dropdown-container untuk ke-3 hingga ke-20 dengan pola yang sama -->
+        </div>
+
+
+    </div>
+
+<!-- Input untuk 6-10 -->
+
+
+    <div class="redesidepick">
+        <div id="dropdowns-container"><H2>Pick</H2> 
+            <!-- Setiap dropdown diberi ID unik berdasarkan indeks -->
+
+
+            <!-- Tambahkan dropdown-container untuk ke-3 hingga ke-20 dengan pola yang sama -->
+        </div>
+
+
+    </div>
+
+    <div class="redesideban">
+        <div id="dropdowns-container"><H2>ban</H2> 
+            <!-- Setiap dropdown diberi ID unik berdasarkan indeks -->
+
+
+
+            <!-- Tambahkan dropdown-container untuk ke-3 hingga ke-20 dengan pola yang sama -->
+        </div>
+
+
+    </div>
+
+    <div class="bluelast">
+        <div class="container">
+            <!-- Input untuk nama tim -->
+            <div class="input-container">
+                <input id="team1" type="text" value="" oninput="updateTeamName()">
+            
+            <div class="input-container">
+                    <input id="file1" type="file" accept="image/*" onchange="loadImage(event, 'image1')">
+            </div>
+            
+            <div class="checkbox-container">
+                <h4>Win=Check</h4>
+                <label><input type="checkbox" id="checkbox1" onclick="toggleImage('extraImage1')" unchecked>1</label>
+                <label><input type="checkbox" id="checkbox2" onclick="toggleImage('extraImage2')" unchecked>2</label>
+                <label><input type="checkbox" id="checkbox3" onclick="toggleImage('extraImage3')" unchecked>3</label>
+                
+            </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="redlast">
+        <div class="container">
+            <!-- Input untuk nama tim -->
+            <div class="input-container">
+                <input id="team2" type="text" value="" oninput="updateTeamName()">
+            
+            <div class="input-container">
+                    <input id="file2" type="file" accept="image/*" onchange="loadImage(event, 'image2')">
+            </div>
+            
+            <div class="checkbox-container">
+                <h4>Win=Check</h4>
+                <label><input type="checkbox" id="checkbox4" onclick="toggleImage('extraImage4')" unchecked>1</label>
+                <label><input type="checkbox" id="checkbox5" onclick="toggleImage('extraImage5')" unchecked>2</label>
+                <label><input type="checkbox" id="checkbox6" onclick="toggleImage('extraImage6')" unchecked>3</label>
+                
+            </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+
+</body>
+
+
+<script src="script.js"></script>
+</html>
